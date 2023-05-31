@@ -108,6 +108,10 @@ nav ul li:hover a {
   height: 100vh;
 }
 
+#hero {
+  scroll-margin-top: 56px;
+}
+
 .hero-aside {
   display: flex;
 }
