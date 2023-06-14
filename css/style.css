@@ -278,11 +278,11 @@ nav ul li:hover a {
 
 /* experiences */
 #experiences {
-  scroll-margin-top: 8rem;
+  scroll-margin-top: 6rem;
 }
 
 .experiences {
-  margin: 10rem 0;
+  margin: 8rem 0;
 }
 
 .experiences-header {
@@ -404,9 +404,245 @@ article .exp-desc .pr-title p {
   font-weight: 400;
 }
 
+/* projects */
+#projects {
+  scroll-margin-top: 6rem;
+}
+
+.projects {
+  margin-bottom: 8rem;
+}
+
+.projects-header {
+  text-align: center;
+}
+
+.projects-header h1 {
+  font-size: 2.25rem;
+}
+
+.proj-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.projects .proj-title {
+  height: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232020;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.projects .proj-title h3 {
+  color: #f8f9fa;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.projects .proj-content {
+  display: flex;
+  gap: 8px;
+  height: 384px;
+}
+
+.projects .proj-img img {
+  height: 384px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+.projects .proj-desc {
+  flex: 1;
+  background-color: #f3a740;
+  border-radius: 8px;
+  padding: 2rem;
+}
+.proj-desc .proj-desc-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.proj-desc-p p {
+  font-weight: 300;
+}
+
+.proj-desc a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  color: #232020;
+  padding: 0 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.proj-desc a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: -50%;
+  transform: translateX(50%);
+  height: 3px;
+  width: 100%;
+  background: #232020;
+  border-radius: 999px;
+}
+
+.proj-desc a:hover {
+  padding-bottom: 3px;
+}
+
+/* contact */
+.contact {
+  background-color: #232020;
+}
+
+.container-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6rem 0;
+  align-items: flex-start;
+}
+
+.contact .hit-me-up {
+  color: #f8f9fa;
+}
+
+.contact .hit-me-up h1 {
+  font-size: 2.5rem;
+}
+
+.hit-me-up .contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-links .e-mail-box,
+.linkedin-box {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3a740;
+  border-radius: 999px;
+  padding: 0.6rem 2rem;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.1s ease-in-out;
+}
+
+.contact-links a:hover {
+  color: #232020;
+}
+
+.contact-links a:active {
+  color: #f8f9fa;
+}
+
+.contact-links img {
+  padding-right: 1rem;
+}
+
+.contact-form .contact-form label,
+button,
+input,
+textarea {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .contact-form {
+  width: 28rem;
+}
+
+.contact fieldset,
+input,
+textarea,
+button {
+  border-style: none;
+}
+
+fieldset form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+fieldset form input,
+textarea {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 4px;
+}
+
+fieldset form input {
+  height: 48px;
+}
+
+fieldset form textarea {
+  height: 144px;
+  resize: none;
+}
+
+fieldset label {
+  color: #f8f9fa;
+}
+
+fieldset label span {
+  padding-left: 1rem;
+}
+
+fieldset button {
+  width: fit-content;
+  margin: 1rem 0;
+  padding: 5px 2rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  background-color: #f3a740;
+  color: #232020;
+  transition: all 0.1s ease-in-out;
+}
+
+fieldset button:hover {
+  color: #f8f9fa;
+  cursor: pointer;
+}
+
+fieldset button:active {
+  background-color: #232020;
+  cursor: wait;
+}
+
 /* footer */
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 1rem;
+  font-size: 1rem;
+  height: 4.5rem;
+  background-color: #f3a740;
+  color: #232020;
+}
+
+footer h4 {
   font-size: 1rem;
 }
