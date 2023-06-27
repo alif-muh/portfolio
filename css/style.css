@@ -332,6 +332,7 @@ hr {
 .exp-col-align {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   gap: 2rem;
   align-items: flex-start;
 }
@@ -424,7 +425,22 @@ article .exp-desc .pr-title p {
 .proj-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  row-gap: 2rem;
+}
+
+.projects .proj-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.projects .proj-content {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.projects .proj-content-reverse {
+  flex-direction: row-reverse;
 }
 
 .projects .proj-title {
@@ -435,7 +451,6 @@ article .exp-desc .pr-title p {
   align-items: center;
   background-color: #232020;
   border-radius: 8px;
-  margin-bottom: 8px;
 }
 
 .projects .proj-title h3 {
@@ -444,14 +459,8 @@ article .exp-desc .pr-title p {
   font-size: 1rem;
 }
 
-.projects .proj-content {
-  display: flex;
-  gap: 8px;
-  height: 384px;
-}
-
-.projects .proj-img img {
-  height: 384px;
+.projects img {
+  max-height: 24rem;
   aspect-ratio: 16 / 9;
   border-radius: 8px;
 }
@@ -558,7 +567,6 @@ article .exp-desc .pr-title p {
 }
 
 .contact-form .contact-form label,
-button,
 input,
 textarea {
   display: flex;
@@ -571,8 +579,7 @@ textarea {
 
 .contact fieldset,
 input,
-textarea,
-button {
+textarea {
   border-style: none;
 }
 
@@ -589,6 +596,7 @@ textarea {
   border-radius: 1rem;
   padding: 1rem;
   margin-top: 4px;
+  font-size: 0.8rem;
 }
 
 fieldset form input {
@@ -608,15 +616,57 @@ fieldset label span {
   padding-left: 1rem;
 }
 
-fieldset button {
-  width: fit-content;
-  margin: 1rem 0;
-  padding: 5px 2rem;
-  border-radius: 999px;
+/* button */
+button {
   font-size: 1rem;
-  background-color: #f3a740;
-  color: #232020;
-  transition: all 0.1s ease-in-out;
+  background: #f3a740;
+  color: white;
+  margin: 1rem 0;
+  padding: 0.4rem 1.35rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
 }
 
 fieldset button:hover {
@@ -645,4 +695,118 @@ footer {
 
 footer h4 {
   font-size: 1rem;
+}
+
+/* responsive */
+/* max-width: 1200px; */
+@media screen and (max-width: 1200px) {
+  .hero,
+  .experiences,
+  .projects {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  /* experiences */
+  .experiences {
+    margin-bottom: 6rem;
+  }
+
+  .experiences .exp-col-align {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    padding-bottom: 2rem;
+  }
+
+  .experiences .exp-card-column {
+    flex-direction: row;
+    max-height: 510px;
+    align-items: flex-start;
+  }
+
+  /* projects */
+  .projects .proj-container {
+    flex-direction: row;
+    overflow: scroll;
+    column-gap: 1.5rem;
+  }
+
+  .projects .proj-content {
+    flex-direction: column;
+    row-gap: 0.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .proj-content-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .proj-desc-box {
+    row-gap: 2rem;
+  }
+
+  .proj-link a:hover {
+    padding-bottom: 0;
+  }
+}
+
+/* max-width: 768px; */
+@media screen and (max-width: 768px) {
+  /* hero */
+  #hero {
+    scroll-margin-top: 19rem;
+  }
+
+  .hero {
+    margin-top: 16rem;
+  }
+
+  .container-split {
+    flex-direction: column;
+  }
+
+  .hero-about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  /* stacks */
+  .stacks-icons-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  /* projects */
+  .projects .proj-box {
+    width: 85%;
+  }
+
+  /* contact */
+  .contact .container-contact {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4rem;
+  }
+
+  .contact .hit-me-up {
+    text-align: center;
+  }
+
+  .hit-me-up .contact-links {
+    align-items: center;
+  }
+
+  .contact-links .e-mail-box,
+  .linkedin-box {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }

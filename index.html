@@ -317,9 +317,7 @@
                 <h3>Kapalasastra UGM Landing Page</h3>
               </div>
               <div class="proj-content">
-                <div class="proj-img">
-                  <img src="assetes/imgs/proj-kaps-img.jpg" alt="" />
-                </div>
+                <img src="assetes/imgs/proj-kaps-img.jpg" alt="" />
                 <div class="proj-desc">
                   <div class="proj-desc-box">
                     <div class="proj-desc-p">
@@ -341,7 +339,8 @@
               <div class="proj-title">
                 <h3>Yogyakarta Philosophical Imaginary Axis Virtual Tour</h3>
               </div>
-              <div class="proj-content">
+              <div class="proj-content proj-content-reverse">
+                <img src="assetes/imgs/proj-virtual-tour-img.jpg" alt="" />
                 <div class="proj-desc">
                   <div class="proj-desc-box">
                     <div class="proj-desc-p">
@@ -354,9 +353,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="proj-img">
-                  <img src="assetes/imgs/proj-virtual-tour-img.jpg" alt="" />
-                </div>
               </div>
             </div>
             <!-- proj-virtual-tour -->
@@ -367,9 +363,7 @@
                 <h3>Healing Forest Wanagama Profile Video</h3>
               </div>
               <div class="proj-content">
-                <div class="proj-img">
-                  <img src="assetes/imgs/proj-wanagama-img.jpg" alt="" />
-                </div>
+                <img src="assetes/imgs/proj-wanagama-img.jpg" alt="" />
                 <div class="proj-desc">
                   <div class="proj-desc-box">
                     <div class="proj-desc-p">
@@ -410,11 +404,21 @@
             <div class="contact-form">
               <fieldset>
                 <form id="message-from-portfolio" method="POST" action="https://script.google.com/macros/s/AKfycbzvIfB5hyRKR2uCiQN0i5CVUUhmTyylJiv_W7dPj3ooP2vT3e_FfNOkjmA4DrSYNPA0nA/exec">
-                  <label for="name"><span>Name:</span><input name="name" type="text" placeholder="Knock-knock who's there? :D" required /></label>
-                  <label for="e-mail"><span>E-mail:</span><input name="e-mail" type="e-mail" placeholder="So I can contact you back ;D" required /></label>
-                  <label for="message"><span>Message:</span><textarea name="message" id="message" placeholder="Hmmm, I'm curious..." required></textarea></label>
+                  <label for="name"><span>Name:</span><input name="name" type="text" placeholder="Knock-knock who's there? :D" autocomplete="off" required /></label>
+                  <label for="e-mail"><span>E-mail:</span><input name="e-mail" type="e-mail" placeholder="So I can contact you back ;D" autocomplete="off" required /></label>
+                  <label for="message"><span>Message:</span><textarea name="message" id="message" placeholder="Hmmm, I'm curious..." autocomplete="off" required></textarea></label>
                   <div class="container-center">
-                    <button id="send-messaga">Send</button>
+                    <button id="send-message">
+                      <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                          <svg height="1.25rem" width="1.25rem" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>Send</span>
+                    </button>
                   </div>
                 </form>
               </fieldset>
