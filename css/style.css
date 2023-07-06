@@ -49,7 +49,7 @@ header {
   font-size: 1.25rem;
   font-weight: 400;
   position: relative;
-  top: -16px;
+  top: -1rem;
   word-spacing: 0.15rem;
   letter-spacing: 0.05rem;
 }
@@ -702,7 +702,8 @@ footer h4 {
 @media screen and (max-width: 1200px) {
   .hero,
   .experiences,
-  .projects {
+  .projects,
+  .container-contact {
     margin-left: 3rem;
     margin-right: 3rem;
   }
@@ -716,7 +717,7 @@ footer h4 {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow: scroll;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
 
   .experiences .exp-card-column {
@@ -808,5 +809,148 @@ footer h4 {
   .linkedin-box {
     width: 100%;
     justify-content: flex-start;
+  }
+}
+
+/* max-width: 375px; */
+
+/* jumbotron */
+@media screen and (max-width: 375px) {
+  nav {
+    justify-content: flex-start;
+    overflow: scroll;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .jumbotron {
+    height: 180px;
+  }
+  .box-jumbotron {
+    padding-top: 0;
+  }
+
+  .jumbotron h3 {
+    font-size: 0.7rem;
+    width: 150px;
+  }
+
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron h2 {
+    font-size: 0.75rem;
+    letter-spacing: 0;
+    word-spacing: 0;
+    top: -0.5rem;
+  }
+
+  /* hero */
+  .hero {
+    margin-top: 15rem;
+  }
+
+  .hero .hero-aside {
+    transform: scale(0.7);
+  }
+
+  .hero .hero-center p {
+    font-size: 1.25rem;
+  }
+
+  .hero .hero-about {
+    margin-top: 1rem;
+  }
+
+  .hero-about h1 {
+    font-size: 2rem;
+  }
+
+  .hero-about p {
+    font-size: 0.8rem;
+    line-height: 22px;
+  }
+
+  .hero-about span {
+    font-size: 0.85rem;
+  }
+
+  /* stacks */
+  .stacks {
+    margin-top: 10rem;
+  }
+
+  .stacks .stacks-header {
+    margin-top: -26px;
+  }
+
+  .stacks .stacks-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .stacks .stacks-icons-container {
+    transform: scale(0.75);
+    padding: 0;
+    flex-direction: column;
+    overflow: visible;
+    row-gap: 4rem;
+  }
+
+  .stacks .stacks-icons {
+    width: 384px;
+  }
+
+  .stacks h3 {
+    font-size: 1.25rem;
+  }
+
+  /* experiences */
+  .experiences {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .experiences .experiences-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .experiences .my-linkedin {
+    transform: scale(0.8);
+  }
+
+  .experiences article {
+    transform: scale(0.95);
+  }
+
+  .experiences .exp-card-column {
+    align-items: flex-start;
+    column-gap: 1rem;
+  }
+
+  /* projects */
+  .projects {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .projects .proj-container {
+    column-gap: 1rem;
+  }
+
+  .projects .proj-title {
+    width: fit-content;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  /* contact */
+  .contact .contact-form {
+    width: 20rem;
   }
 }
